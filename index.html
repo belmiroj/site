@@ -91,6 +91,50 @@
         font-size: 0.9rem;
       }
 
+      	  /* Estilização da Tabela */
+	  table {
+	  	width: 100%;
+	  	border-collapse: collapse; /* Une as bordas em uma única linha */
+	  	margin: 25px 0;
+	  	font-size: 0.95rem;
+	  	min-width: 400px;
+	  	background-color: white;
+	  	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+	  	border-radius: 8px;
+	  	overflow: hidden; /* Garante que o arredondamento apareça */
+	  }
+	  
+	  table thead tr {
+	  	background-color: #2c3e50; /* Azul escuro combinando com o header */
+	  	color: #ffffff;
+	  	text-align: left;
+	  	font-weight: bold;
+	  }
+	  
+	  table th, table td {
+	  	padding: 12px 15px; /* Espaço interno para o texto não encostar na borda */
+	  }
+	  
+	  table tbody tr {
+	  	border-bottom: 1px solid #dddddd; /* Linha sutil entre os itens */
+	  }
+	  
+	  /* Efeito Zebra: cores diferentes para linhas pares */
+	  table tbody tr:nth-of-type(even) {
+	  	background-color: #f8f9fa;
+	  }
+	  
+	  /* Efeito de destaque ao passar o mouse */
+	  table tbody tr:hover {
+	    background-color: #f1f4f6;
+	  	transition: 0.2s;
+	  }
+	  
+	  /* Ajuste para a coluna de descrição (pode ser mais larga) */
+	  table td:last-child {
+	  	line-height: 1.4;
+	  }
+
       /* Estilização do Formulário */
       form {
         display: flex;
@@ -205,6 +249,40 @@
             Este foi meu primeiro site desenvolvido estudando front-end. Utilizei conceitos de semântica HTML e agora, estilos modernos com CSS.
           </p>
         </article>
+      </section>
+
+      <section id="Habilidades">
+
+        <h2>Habilidades e tecnologias</h2>
+
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Nível</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Intermediário</td>
+                        <td>Capaz de construir estruturas de páginas web semânticas e responsivas</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Iniciante</td>
+                        <td>Aplicação de estilos básicos com CSS</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Iniciante</td>
+                        <td>Entendimento da sintaxe básica</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
       </section>
 
       <section id="contato">
