@@ -91,6 +91,65 @@
         font-size: 0.9rem;
       }
 
+      /* Estilização do Formulário */
+      form {
+        display: flex;
+        flex-direction: column; /* Coloca um campo abaixo do outro */
+        gap: 10px;             /* Espaço entre cada campo */
+        max-width: 500px;      /* Não deixa o formulário ficar largo demais */
+        margin: 20px 0;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-bottom: -10px; /* Aproxima a legenda do campo */
+      }
+
+      /* Estiliza Textos, E-mail, Tel, Select e Textarea de uma vez */
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit; /* Usa a mesma fonte do site */
+        box-sizing: border-box; /* Garante que o padding não "estoure" a largura */
+      }
+
+      textarea {
+        resize: vertical; /* Permite aumentar apenas a altura */
+        min-height: 100px;
+      }
+
+      /* Estilo para o Checkbox */
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: normal;
+      }
+
+      /* Estilo do Botão de Enviar */
+      input[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #2980b9;
+      }
+
       /* Rodapé */
       footer {
         text-align: center;
@@ -151,8 +210,38 @@
       <section id="contato">
         <h2>Contatos</h2>
         <p>Tem um projeto em mente? Entre em contato e vamos conversar!</p>
+
+        <form action="">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" required><br>
+            
+            <label for="nome">E-mail: </label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="telefone">Telefone: </label>
+            <input type="tel" id="telefone" name="telefone" required><br>
+
+            <label for="assunto">Assunto: </label>
+            <select id="assunto" name="assunto">
+                <option value="orcamento">Orçamento</option>
+                <option value="duvida">Dúvida</option>
+                <option value="outro">Outro</option>
+            </select><br>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" placeholder="Como posso te ajudar?"></textarea>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="inscricao" name="inscricao">
+                <label for="inscricao" style="margin: 0;">Deseja receber minha newsletter? Fique por dentro</label>
+            </div>
+
+            <input type="submit" value="Enviar mensagem">
+
+        </form>
+
         <address>
-          <strong>E-mail:</strong> <a href="mailto:belmiro1991@gmail.com">belmiro1991@gmail.com</a> <br>
+          <strong>E-mail:</strong> <a href="mailto:belmiro1991@gmail.com">belmiro1991@gmail.com</a><br>
           <strong>Telefone:</strong> <a href="tel:+5548996859848">+55 (48) 996859848</a>
         </address>
       </section>
